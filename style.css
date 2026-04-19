@@ -1,0 +1,155 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #00fbff;
+}
+
+#clickableImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  cursor: pointer;
+}
+
+#scoreDisplay {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+}
+
+#upgradeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#upgradeButton2 {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#upgradeButton3 {
+  position: absolute;
+  top: 110px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#upgradeButton4 {
+  position: absolute;
+  top: 160px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#upgradeButton5 {
+  position: absolute;
+  top: 210px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button.disabled {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+}
+
+button.enabled {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+#miniImg1, #miniImg2, #miniImg3, #miniImg4, #miniImg5 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  z-index: 10;
+  filter: grayscale(100%);
+  bottom: 10px;
+}
+
+#miniImg1 { left: 10px; }
+#miniImg2 { left: 170px; }
+#miniImg3 { left: 330px; }
+#miniImg4 { left: 490px; }
+#miniImg5 { left: 650px; }
+
+.mini-tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+  z-index: 12;
+  pointer-events: none;
+  display: none;
+}
+
+#miniImg1.gold, #miniImg2.gold, #miniImg3.gold, #miniImg4.gold, #miniImg5.gold {
+  border: 5px solid gold;
+  border-radius: 50%;
+  animation: spin 10s linear infinite;
+}
+
+#miniImg1.red, #miniImg2.red, #miniImg3.red, #miniImg4.red, #miniImg5.red {
+  border: 5px solid red;
+  border-radius: 50%;
+  animation: spin 5s linear infinite;
+}
+
+#miniImg1.blue, #miniImg2.blue, #miniImg3.blue, #miniImg4.blue, #miniImg5.blue {
+  border: 5px solid blue;
+  border-radius: 50%;
+  animation: spin 3s linear infinite;
+}
+
+#miniImg1.white, #miniImg2.white, #miniImg3.white, #miniImg4.white, #miniImg5.white {
+  border: 5px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.mini-text {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2px 4px;
+  border-radius: 3px;
+  z-index: 11;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
