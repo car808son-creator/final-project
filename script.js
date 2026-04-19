@@ -132,8 +132,8 @@ multiplierButton.addEventListener('click', function() {
 });
 
 upgradeButton6.addEventListener('click', function() {
-  if (rice >= 500000) {
-    rice -= 500000;
+  if (rice >= 50000) {
+    rice -= 50000;
     autoClickers750ps += 1;
     updateScoreDisplay();
     checkUpgradeButtons();
