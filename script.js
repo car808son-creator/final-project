@@ -268,6 +268,9 @@ function checkUpgradeButtons() {
 
 // Auto-clicker interval every 1 second
 setInterval(function() {
+  if (rice > 1000000000000) {
+    document.getElementById("clickableImg").src = "Cody.png";
+  }
   rice += autoClickers1; // +1 per second
   rice += autoClickers10ps * 10; // +10 per second per upgrade
   rice += autoClickers50ps * 50; // +50 per second per upgrade
